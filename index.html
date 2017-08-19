@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://code.angularjs.org/1.5.0-rc.0/angular.min.js"></script>
+    
+</head>
+<body>
+       
+
+
+<div ng-app="FirstApp" ng-controller="formCtrl" class="container">
+    <form class="well input-form" name="inputform">
+            <div class="form-group has-feedback" ng-class="{'has-success':inputform.email.$dirty && inputform.email.$valid, 'has-error':inputform.email.$dirty && inputform.email.$invalid}">
+                    <label class="control-label">Email address</label>
+                    <input type="email" class="form-control" ng-model="data.email" name="email" placeholder="Enter email">
+                    <span class="glyphicon form-control-feedback" ng-class="{'glyphicon-ok':inputform.email.$dirty && inputform.email.$valid,'glyphicon-remove':inputform.email.$dirty && inputform.email.$invalid}"></span>
+                  </div>
+                  <div class="form-group has-feedback" ng-class="{'has-success':inputform.password.$dirty && inputform.password.$valid, 'has-error':inputform.password.$dirty && inputform.password.$invalid}">
+                    <label class="control-label">Password</label>
+                    <input type="password" class="form-control" ng-model="data.password" name="password" placeholder="Password" required>
+                    <span class="glyphicon  form-control-feedback" ng-class="{'glyphicon-ok':inputform.password.$dirty && inputform.password.$valid,'glyphicon-remove':inputform.password.$dirty && inputform.password.$invalid}"></span>
+            </div> 
+    </form>
+    <p>{{data}}</p>
+</div>    
+
+
+
+<script src="js/script.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>    
+</body>
+</html>
